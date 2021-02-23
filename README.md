@@ -1,4 +1,4 @@
 # KyleJohnsonPortfolio
 
 ## Introduction
-I would like to first start by saying hello. I am husband, dad, developer, and lastly an old skateboarder who is still hanging on by a thread.  
+I would like to first start by saying hello. I'm Kyle Johnson from Orlando. I am husband, dad, web designer, web developer, and lastly an old 90's skateboarder.   
