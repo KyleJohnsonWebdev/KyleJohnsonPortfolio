@@ -5,4 +5,7 @@ I would like to first start by saying hello. I'm Kyle Johnson from Orlando. I am
 
 ## Skills
 * :atom: React
+* :file_folder: MySQL, PostgreSQL, MongoDB 
 * :computer: CSS, HTML, JS
+
+
