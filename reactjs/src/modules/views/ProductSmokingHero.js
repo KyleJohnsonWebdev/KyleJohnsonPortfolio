@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
+import ListItem from '@material-ui/core/ListItem';
 
 const styles = (theme) => ({
   root: {
@@ -32,6 +33,8 @@ function ProductSmokingHero(props) {
   const { classes } = props;
 
   return (
+    <div>
+    <ListItem button key="Email" component="a" href="mailto:ktjohnson@student.fullsail.edu" className={classes.link}>
     <Container className={classes.root} component="section">
       <Button className={classes.button}>
         <Typography variant="h4" component="span">
@@ -39,10 +42,14 @@ function ProductSmokingHero(props) {
         </Typography>
       </Button>
       <Typography variant="subtitle1" className={classes.link}>
-        We are here to help. Get in touch!
+        I am here to help. Get in touch!
       </Typography>
-      <img src="/static/themes/onepirate/producBuoy.svg" className={classes.buoy} alt="buoy" />
+        <Typography variant="subtitle1"   >
+          Email: KTJohnson@student.fullsail.edu
+        </Typography>
     </Container>
+    </ListItem>
+    </div>
   );
 }
 

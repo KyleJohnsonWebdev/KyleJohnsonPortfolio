@@ -5,9 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import TextField from '../components/TextField';
-import Snackbar from '../components/Snackbar';
-import Button from '../components/Button';
+import ListItem from '@material-ui/core/ListItem';
 
 const styles = (theme) => ({
   root: {
@@ -53,40 +51,34 @@ const styles = (theme) => ({
     left: -28,
     right: 0,
     bottom: 0,
-    width: '100%',
+    width: '80%',
     maxWidth: 600,
   },
 });
 
 function ProductCTA(props) {
   const { classes } = props;
-  const [open, setOpen] = React.useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setOpen(true);
-  };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <Container className={classes.root} component="section">
       <Grid container>
         <Grid item xs={12} md={6} className={classes.cardWrapper}>
           <div className={classes.card}>
-            <form onSubmit={handleSubmit} className={classes.cardContent}>
+            <form  className={classes.cardContent}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+                Send Me an email today
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Let's make your site today.
               </Typography>
-              <TextField noBorder className={classes.textField} placeholder="Your email" />
-              <Button type="submit" color="primary" variant="contained" className={classes.button}>
-                Keep me updated
-              </Button>
+              <ListItem button key="Email" component="a" href="mailto:ktjohnson@student.fullsail.edu">
+              <Typography variant="h6">
+                ktjohnson@student.fullsail.edu
+              </Typography>
+              </ListItem>
+
             </form>
           </div>
         </Grid>
@@ -94,18 +86,13 @@ function ProductCTA(props) {
           <Hidden smDown>
             <div className={classes.imageDots} />
             <img
-              src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
+              src="https://live.staticflickr.com/65535/50984409078_30b8f6d253_w.jpg"
               alt="call to action"
               className={classes.image}
             />
           </Hidden>
         </Grid>
       </Grid>
-      <Snackbar
-        open={open}
-        onClose={handleClose}
-        message="We will send you our best offers, once a week."
-      />
     </Container>
   );
 }
